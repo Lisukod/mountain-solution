@@ -31,6 +31,7 @@
   flex: 1;
   text-transform: uppercase;
   font-weight: 400;
+  text-align: center;
 }
 
 .main__navigation a {
@@ -211,18 +212,13 @@
 }
 
 @media screen and (max-width: 570px) {
-  .main__navigation {
-    width: auto;
-    margin: auto;
-  }
-  .main__navigation ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 70%;
+  .about, .offer, .gallery, .contact {
+    display: none;
   }
   .main__title .main__title__text {
     letter-spacing: 0;
     margin-top: -40px;
+    font-size: 50px;
   }
   .main__popup__container {
     width: 60%;
@@ -231,12 +227,6 @@
 }
 
 @media screen and (max-height: 570px) {
-  .main__navigation ul li {
-    flex-basis: 30%;
-  }
-  .main__title .main__title__text {
-    font-size: 50px;
-  }
   .main__popup__container .main__popup__container__form__input-group {
     display: inline-block;
   }
