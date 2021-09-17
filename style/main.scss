@@ -2,7 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .main {
-    background-image: url("../media/Background.jpg");
+    // background-image: url("../media/Background.jpg");
+    background-image: image-set(
+        url("../media/Background.jpg") 1x,
+        url("../media/Background-1340.jpg") 2x);
+    background-image: -webkit-image-set(
+        url("../media/Background.jpg") 1x,
+        url("../media/Background-1340.jpg") 2x);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% -30px;
