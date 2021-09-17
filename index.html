@@ -23,20 +23,46 @@
                 </ul>
             </nav>
             
-            <section class="main__content" style="display: none;">
-                <h1>Mountain Kingdom</h1>
-                <button>Enter the gates</button>
+            <section class="main__title">
+                <h1 class="main__title__text">Mountain kingdom</h1>
+                <button id="openPopupBtn" class="main__title__button">Enter the gates</button>
+            </section>
+        
+            <section id="loginPopup" class="main__popup--shadow hide">
+                <section id="formContainer" class="main__popup__container">
+                    <form action="https://recruitment-api.pyt1.stg.jmr.pl/login" class="main__popup__container__form" id="login-form">
+                        <h2 class="main__popup__container__form__title">
+                           Are you a Mountain Knight?
+                        </h2>
+                        <div class="main__popup__container__form__message--error">
+                            Incorrect username/password combination.
+                        </div>
+                        <div class="main__popup__container__form__input-group">
+                            <input type="text" name="login" class="main__popup__container__form__input-group__input" placeholder="E-mail">
+                        </div>
+                        <div class="main__popup__container__form__input-group">
+                            <input type="password" name="password" class="main__popup__container__form__input-group__input" placeholder="Password">
+                        </div>
+                        <button type="submit" value="login" id="login-btn" class="main__popup__container__form__button-login">
+                            Log in
+                        </button>
+
+                    </form>
+                </section>
             </section>
             
-            <section class="main__login-popup" style="display: none;">
-                
-            </section>
-            
-            <footer style="display: none;">
-                2019 Mountain Kingdom
-                <a href="#">Cookies</a> | <a href="#">Privacy</a>
-                Design by <a href="#">Wizard of Oz</a>
+            <footer class="main__footer">
+                <span class="main__footer__copyright">
+                    &#169; 2019 Mountain kingdom
+                </span>
+                <span class="main__footer__links">
+                    <a href="#">Cookies</a> | <a href="#">Privacy</a>
+                </span>
+                <span class="main__footer__signature">
+                   Design by <a href="#">Wizard of Oz</a>
+                </span>
             </footer>
         </div>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
