@@ -131,7 +131,10 @@
         font-weight: 400;
     }
     .main__popup__container__form__message--error {
-        display: none;
+        color: red
+    }
+    .main__popup__container__form__message--success{
+        color: green;
     }
     .main__popup__container__form__input-group {
         input {
@@ -168,7 +171,10 @@
     display: none;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1340px) {
+    .main{
+        background-position: 50% 0px;
+    }
     .main__navigation {
         width: 100%;
     }

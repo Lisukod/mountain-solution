@@ -10,6 +10,19 @@ function openLoginPopup() {
     })
 }
 
+function showError() {
+	document.getElementById('loginError').classList.remove('hide');
+	document.getElementById("formContainer").addEventListener('click', function(){
+		document.getElementById('loginError').classList.add('hide');
+	}, { once: true })
+}
+
+function showSuccess() {
+	document.getElementById('loginSuccess').classList.remove('hide');
+	document.getElementById("formContainer").addEventListener('click', function(){
+		document.getElementById('loginSuccess').classList.add('hide');
+	}, { once: true })
+}
 
 
 //Fetch login API
@@ -47,6 +60,11 @@ async function handleFormSubmit(event) {
 		const formData = new FormData(form);
 		const responseData = await postFormDataAsJson({ url, formData });
 
+		if (responseData.status !== "ok") {
+			showError()
+		} else {
+			showSuccess()
+		}
 		console.log({ responseData });
 	} catch (error) {
 		console.error(error);
