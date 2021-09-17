@@ -221,3 +221,20 @@
         min-width: 280px;
     }
 }
+
+@media screen and (max-height: 500px) {
+    .main__title {
+        margin: auto;
+        .main__title__text {
+            font-size: 30px;
+        }
+    }
+    .main__popup__container {
+        .main__popup__container__form__input-group {
+            display: inline-block;
+        }
+        .main__popup__container__form__button-login {
+            margin-top: auto;
+        }
+    }
+}
