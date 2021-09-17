@@ -91,6 +91,11 @@
 .main__footer .main__footer__copyright {
   font-size: 15px;
   text-transform: uppercase;
+  order: 1;
+}
+
+.main__footer .main__footer__links {
+  order: 2;
 }
 
 .main__footer .main__footer__links a {
@@ -98,6 +103,10 @@
   text-decoration: none;
   padding: 15px;
   letter-spacing: 2px;
+}
+
+.main__footer .main__footer__signature {
+  order: 3;
 }
 
 .main__footer .main__footer__signature a {
@@ -124,6 +133,7 @@
 .main__popup__container {
   background-color: white;
   width: 20%;
+  min-width: 350px;
   padding: 20px 10px 40px 10px;
   text-align: center;
 }
@@ -169,4 +179,48 @@
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .main__navigation {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .main__footer {
+    height: 12vh;
+    flex-direction: column;
+  }
+  .main__footer .main__footer__copyright {
+    order: 3;
+  }
+  .main__footer .main__footer__links {
+    order: 1;
+  }
+  .main__footer .main__footer__signature {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 570px) and (min-width: 320px) {
+  .main__navigation {
+    width: auto;
+    margin: auto;
+  }
+  .main__navigation ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__navigation ul .main-logo {
+    order: -1;
+  }
+  .main__title .main__title__text {
+    letter-spacing: 0;
+    margin-top: -40px;
+  }
+  .main__popup__container {
+    width: 60%;
+    min-width: 280px;
+  }
 }
