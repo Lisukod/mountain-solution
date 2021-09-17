@@ -182,6 +182,10 @@
   cursor: pointer;
 }
 
+.main__bottom-navigation .about, .main__bottom-navigation .offer, .main__bottom-navigation .gallery, .main__bottom-navigation .contact {
+  display: none;
+}
+
 .hide {
   display: none;
 }
@@ -212,8 +216,39 @@
 }
 
 @media screen and (max-width: 570px) {
-  .about, .offer, .gallery, .contact {
+  .main__navigation .about, .main__navigation .offer, .main__navigation .gallery, .main__navigation .contact {
     display: none;
+  }
+  .main__bottom-navigation {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 80px;
+    width: 100%;
+  }
+  .main__bottom-navigation ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main__bottom-navigation ul li {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+  }
+  .main__bottom-navigation ul li a {
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 5px;
+    width: 90%;
+  }
+  .main__bottom-navigation ul li a:hover {
+    text-decoration: underline;
+  }
+  .main__bottom-navigation ul .about, .main__bottom-navigation ul .offer, .main__bottom-navigation ul .gallery, .main__bottom-navigation ul .contact {
+    display: inherit;
   }
   .main__title .main__title__text {
     letter-spacing: 0;
@@ -223,6 +258,12 @@
   .main__popup__container {
     width: 60%;
     min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__bottom-navigation ul li {
+    flex: 50%;
   }
 }
 
